@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC | Instagram Survey Form</title>
+
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+
+<body>
+
+<!-- A fixed background image -->
+    <div class="background"><img src="./IMAGES/instagram.jpg"></div>
+
+<!-- A wrapper to warp the header and form -->
+    <div class="wrapper">
+        <!-- The header -->
+        <header>
+            <h1 id="title">Instagram Survey Form</h1>
+            <p id="description">Your Feedback is our growth</p>
+        </header>
+
+        <!-- The form part -->
+        <main>
+            <form action="./index.html" id="survey-form">
+
+                <!-- Name -->
+                <div class="form-section" id="sec-1">
+                    <div class="spacer">
+                        <label for="name" class="main-questions">Name</label>
+                        <input type="text" placeholder="Enter your name" id="name" required>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="spacer">
+                        <label for="email" class="main-questions">Email</label>
+                        <input type="email" placeholder="Enter your email" id="email" required>
+                    </div>
+                    
+                    <!-- Followers -->
+                    <div class="spacer">
+                        <label for="number" class="main-questions">Followers (Minimum of 1)</label>
+                        <input type="number" name="age" placeholder="Followers" id="number" min="1" max="1000000">
+                    </div>
+                </div>
+                
+                
+                <!-- Current theme -->
+                <div class="form-section spacer" id="sec-2">
+                    <p class="questions main-questions">What is your current theme?</p>
+                    <select name="options-1" id="dropdown">
+                        <option value="select" selected disabled>Select current theme</option>
+                        <option value="web development">Web Development</option>
+                        <option value="graphic designing">Graphic designing</option>
+                        <option value="programming">Programming</option>
+                        <option value="art">Art</option>
+                    </select>
+                </div>
+                
+
+                <!-- Instagram Usage -->
+                <div class="form-section spacer" id="sec-3">
+                    <p class="questions main-questions">How often do you post on Instagram?</p>
+                    <div class="aligner">
+                        <label for="insta-use-1">More than once a day</label>
+                        <input type="radio" name="usage" id="insta-use-1">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="insta-use-2">Once a day</label>
+                        <input type="radio" name="usage" id="insta-use-2">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="insta-use-3">Once/Twice a day</label>
+                        <input type="radio" name="usage" id="insta-use-3">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="insta-use-4">A couple times per month</label>
+                        <input type="radio" name="usage" id="insta-use-4">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="insta-use-5">Rarely</label>
+                        <input type="radio" name="usage" id="insta-use-5">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="insta-use-6">Never</label>
+                        <input type="radio" name="usage" id="insta-use-6">
+                    </div>
+                </div>
+                
+                
+                <!-- Purpose of post -->
+                <div class="form-section spacer" id="sec-4">
+                    <p class="questions main-questions">Do you post for...</p>
+                    <select name="posts" id="post-purpose">
+                        <option value="default" selected disabled>Select an option</option>
+                        <option value="fun">Fun</option>
+                        <option value="business">Business purpose</option>
+                        <option value="yourself">Yourself</option>
+                    </select>
+                </div>
+                
+
+                <!-- Most Liked Images -->
+                <div class="form-section spacer" id="sec-5">
+                    <p class="questions main-questions">Which images you think you like the most (you can choose up to 3)</p>
+                    <div class="aligner">
+                        <label for="image-type-1">People</label>
+                        <input type="checkbox" name="image-types" id="image-type-1" value="people">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="image-type-2">Food</label>
+                        <input type="checkbox" name="image-types" id="image-type-2" value="food">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="image-type-3">Pets</label>
+                        <input type="checkbox" name="image-types" id="image-type-3" value="pets">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="image-type-4">Travel Destination</label>
+                        <input type="checkbox" name="image-types" id="image-type-4" value="travel destination">
+                    </div>                
+                    
+                    <div class="aligner">
+                        <label for="image-type-6">Funny things</label>
+                        <input type="checkbox" name="image-types" id="image-type-6" value="funny things">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="image-type-8">Makeup tutorial</label>
+                        <input type="checkbox" name="image-types" id="image-type-8" value="makeup tutorial">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="image-type-9">Fashion advices</label>
+                        <input type="checkbox" name="image-types" id="image-type-9" value="fashion advices">
+                    </div>
+                    
+                    <div class="aligner">
+                        <label for="image-type-10">Celebreties</label>
+                        <input type="checkbox" name="image-types" id="image-type-10" value="celebreties">
+                    </div>
+                </div>
+                
+                
+                <!-- Extra Feedbacks -->
+                <div class="form-section spacer" id="sec-6">
+                    <label for="extra-feedback" class="questions main-questions">Any feedbacks or suggestions?</label>
+                    <textarea name="feedback" id="extra-feedback" cols="30" rows="5" placeholder="Type your feedbacks here..."></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <div class="form-section spacer" id="sec-7">
+                    <button type="submit" id="submit">
+                        Submit
+                    </button>
+                </div>
+                
+
+            </form>
+        </main>
+    </div>
+
+
+</body>
+
+</html>

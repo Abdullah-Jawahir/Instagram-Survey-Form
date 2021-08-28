@@ -1,0 +1,52 @@
+$text-color: #fff;
+$sub-text-color: lightgray;
+$form-color: rgb(133, 131, 131);
+$primary-color: rgba(gray, 0.5);
+$mg-btm: 3rem;
+$pd-y: 4rem;
+$pd-x: $pd-y - 1rem;
+$pd-y-481: 3rem;
+$pd-x-481: $pd-y-481 - 1rem;
+$insta-gradient: linear-gradient(
+
+    45deg,
+    #845ec2,
+    #d65db1,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+);
+
+$insta-gradient-2: linear-gradient(
+
+    45deg,
+    #b34792,
+    #7347b9
+    
+);
+
+$insta-gradient-2-reverse: linear-gradient(
+
+    45deg,
+    #7347b9,
+    #b34792
+    
+);
+
+$insta-gradient-3: linear-gradient(
+
+    45deg,
+    #845ec2,
+    #d65db1,
+    #ff9671
+    
+);
+
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+

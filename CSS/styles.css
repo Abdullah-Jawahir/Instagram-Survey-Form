@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none
+}
+
+h1 {
+    font-size: 2.5rem
+}
+
+p {
+    margin: 0
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff
+}
+
+.background {
+    width: 100%;
+    max-height: 100vh;
+    height: 100vh;
+    position: relative
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: fixed
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    position: absolute;
+    top: 0;
+    z-index: 10
+}
+
+.wrapper header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(128, 128, 128, 0.5);
+    width: 100%;
+    margin-bottom: 3rem;
+    color: #d3d3d3;
+    padding-bottom: 1rem
+}
+
+.wrapper header #title,
+.wrapper header #description {
+    letter-spacing: 0.5vw
+}
+
+.wrapper header #title {
+    font-size: 2.7rem
+}
+
+.wrapper header #description {
+    margin-top: 0;
+    font-size: 1.7rem
+}
+
+.wrapper main {
+    width: 70%;
+    margin-bottom: 3rem
+}
+
+.wrapper main #survey-form {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 5px #8d8d8d, inset 4px 4px 5px #585858;
+    padding: 4rem 3rem
+}
+
+.wrapper main #survey-form .form-section {
+    display: flex;
+    flex-direction: column
+}
+
+.wrapper main #survey-form .form-section .main-questions {
+    font-size: 1.6rem;
+    letter-spacing: 0.1vw
+}
+
+.wrapper main #survey-form .form-section .questions {
+    margin-bottom: 0.7rem
+}
+
+.wrapper main #survey-form .form-section .aligner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 0.4rem
+}
+
+.wrapper main #survey-form .form-section .aligner label {
+    color: #d3d3d3;
+    font-size: 1.2rem
+}
+
+.wrapper main #survey-form .form-section .aligner input[type="radio"],
+.wrapper main #survey-form .form-section .aligner input[type="checkbox"] {
+    margin-right: 1rem;
+    width: 1.3em;
+    height: 1.3em;
+    font-size: 1rem
+}
+
+.wrapper main #survey-form select,
+.wrapper main #survey-form textarea {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: #d3d3d3
+}
+
+.wrapper main #survey-form option {
+    color: black
+}
+
+.wrapper main #survey-form textarea {
+    color: #d3d3d3;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.wrapper main #survey-form textarea::placeholder {
+    color: #d3d3d3
+}
+
+.wrapper main #sec-1 input,
+.wrapper main .form-section select,
+.wrapper main textarea {
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: large;
+    outline: none
+}
+
+.wrapper main .spacer {
+    margin-bottom: 2rem
+}
+
+.wrapper main #sec-1 .spacer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: stretch
+}
+
+.wrapper main #sec-1 input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    border-radius: 0;
+    padding-left: 0;
+    color: #d3d3d3
+}
+
+.wrapper main #sec-1 input::placeholder {
+    color: #d3d3d3
+}
+
+.wrapper main #sec-7 {
+    margin-bottom: 0
+}
+
+.wrapper main #sec-7 #submit {
+    padding: 10px;
+    font-size: 1.1rem;
+    color: #d3d3d3;
+    letter-spacing: 0.1vw;
+    background: linear-gradient(45deg, #b34792, #7347b9);
+    cursor: pointer;
+    outline: none
+}
+
+.wrapper main #sec-7 #submit:hover {
+    background: linear-gradient(45deg, #7347b9, #b34792);
+    opacity: 0.8
+}
+
+@media screen and (max-width: 687px) {
+    .wrapper header {
+        margin-bottom: 0
+    }
+
+    .wrapper main {
+        width: 100%;
+        margin-bottom: 0
+    }
+
+    .wrapper main #survey-form {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 2rem 1rem
+    }
+
+    .wrapper main #survey-form .form-section .main-questions {
+        font-size: 1.2rem;
+        letter-spacing: 0
+    }
+
+    .wrapper main #survey-form .form-section .aligner label {
+        font-size: 1rem
+    }
+
+    .wrapper main #survey-form .form-section .aligner input[type="radio"],
+    .wrapper main #survey-form .form-section .aligner input[type="checkbox"] {
+        margin-right: 1rem;
+        width: 1em;
+        height: 1em;
+        font-size: 1rem
+    }
+
+    .wrapper main #sec-1 input,
+    .wrapper main .form-section select,
+    .wrapper main textarea {
+        font-size: 1rem
+    }
+}
+
+@media screen and (max-width: 744px) {
+    .wrapper header #title {
+        text-align: center;
+        font-size: 2.4rem
+    }
+
+    .wrapper header #description {
+        text-align: center;
+        font-size: 1.4rem
+    }
+}

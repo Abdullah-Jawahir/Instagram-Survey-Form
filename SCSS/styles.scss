@@ -1,0 +1,291 @@
+@import './reset';
+@import './utlity';
+
+body {
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: $text-color;
+
+}
+
+.background {
+
+    width: 100%;
+    max-height: 100vh;  
+    height: 100vh;
+    position: relative;
+
+    img {
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: fixed;
+
+    }
+}
+
+.wrapper {
+
+    @include flexCenter(column);
+    width: 100%;
+    height: max-content;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+
+
+    header {
+
+        @include flexCenter(column);
+        background-color: $primary-color;
+        width: 100%;
+        margin-bottom: $mg-btm;
+        color: $sub-text-color;
+        padding-bottom: 1rem;
+
+        #title, #description {
+
+            letter-spacing: 0.5vw;
+        }
+
+        #title {
+
+            font-size: 2.7rem;
+            
+        }
+
+        #description {
+
+            margin-top: 0;
+            font-size: 1.7rem;
+        
+        }
+
+    }
+
+    main {
+
+        width: 70%;
+        margin-bottom: $mg-btm;
+        
+        #survey-form {
+
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow:
+            4px 4px 5px rgb(141, 141, 141),
+            inset 4px 4px 5px rgb(88, 88, 88)
+            ;
+            padding: $pd-y $pd-x;
+
+            .form-section {
+
+                display: flex;
+                flex-direction: column;
+
+                .main-questions {
+                    
+                    font-size: 1.6rem;
+                    letter-spacing: 0.1vw;
+                    // font-weight: 550;
+                }
+
+                .questions {
+
+                    margin-bottom: 0.7rem;  
+                }
+
+                .aligner {
+
+                    @include flexCenter(row-reverse);
+                    justify-content: flex-end;
+                    align-items: flex-start;
+                    margin-bottom: 0.4rem;
+
+                    label {
+
+                        color: $sub-text-color;
+                        font-size: 1.2rem;
+                    }
+
+                    input[type="radio"], input[type="checkbox"] {
+
+                        margin-right: 1rem;
+                        width: 1.3em;
+                        height: 1.3em;
+                        font-size: 1rem;
+                    }
+
+                }
+
+            }
+
+            select, textarea{
+
+                background-color: $primary-color;
+                color: $sub-text-color;
+            }
+            option {
+
+                color: black;
+            }
+
+            textarea {
+
+                color: $sub-text-color;
+                font-size: 1rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            textarea::placeholder {
+
+                color: $sub-text-color;
+            }
+
+        }
+
+        
+    
+        #sec-1 input, .form-section select, textarea {
+    
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: large;
+            outline: none;
+        }
+    
+        .spacer {
+    
+            margin-bottom: 2rem;
+        }
+    
+        #sec-1 {
+    
+            .spacer {
+    
+                @include flexCenter(column);
+                align-items: stretch; 
+            }
+    
+            input {
+    
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $sub-text-color;
+                border-radius: 0;
+                padding-left: 0;
+                color: $sub-text-color;
+    
+                &::placeholder {
+    
+                    color: $sub-text-color;
+                }
+            } 
+    
+        }
+    
+        #sec-7 {
+    
+            margin-bottom: 0;
+
+            #submit {
+
+                padding: 10px;
+                font-size: 1.1rem;
+                color: $sub-text-color;
+                letter-spacing: 0.1vw;
+                background: $insta-gradient-2;
+                cursor: pointer;
+                outline: none;
+
+                &:hover {
+
+                    background: $insta-gradient-2-reverse;
+                    opacity: 0.8;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width: 687px) {
+    .wrapper {
+
+        header {
+
+            margin-bottom: 0;
+        }
+
+        main {
+
+            width: 100%;
+            margin-bottom: 0;
+            
+            #survey-form {
+
+                border-radius: 0;
+                box-shadow: none;
+                padding: 2rem 1rem;
+
+                .form-section {
+
+                    .main-questions {
+                        font-size: 1.2rem;
+                        letter-spacing: 0;
+                    }
+
+                    .aligner {
+
+                        label {
+                            font-size: 1rem;
+                        }
+
+                        input[type="radio"], input[type="checkbox"] {
+
+                            margin-right: 1rem;
+                            width: 1em;
+                            height: 1em;
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+
+            #sec-1 input, .form-section select, textarea {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 744px) {
+    .wrapper {
+
+        header {
+            #title {
+                text-align: center;
+                font-size: 2.4rem;
+            }
+
+            #description {
+
+                text-align: center;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+
